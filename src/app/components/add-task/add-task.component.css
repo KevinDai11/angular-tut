@@ -1,0 +1,10 @@
+.add-form{
+    margin-bottom: 40px;
+    border: 1px solid seagreen;
+    border-radius: 5px;
+    padding: 30px;
+}
+
+input{
+    margin: 0;
+}
