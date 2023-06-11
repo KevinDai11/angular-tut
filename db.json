@@ -13,10 +13,16 @@
       "reminder": false
     },
     {
-      "id": 3,
-      "text": "Food Shopping",
-      "day": "May 7th at 12:30pm",
-      "reminder": false
+      "text": "Shopping",
+      "day": "May 10th at 2:10pm",
+      "reminder": false,
+      "id": 3
+    },
+    {
+      "text": "Buy things",
+      "day": "Monday",
+      "reminder": false,
+      "id": 4
     }
   ]
 }
