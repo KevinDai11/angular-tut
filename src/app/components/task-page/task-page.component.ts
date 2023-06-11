@@ -38,8 +38,7 @@ export class TaskPageComponent {
   }
 
   deleteTask(t: Task) {
-    this.taskService.deleteTask(t).subscribe();
-    this.router.navigate(["/"])
+    this.taskService.deleteTask(t).subscribe( () => this.router.navigate(["/"]) );
   }
 
   onToggle(task: Task){

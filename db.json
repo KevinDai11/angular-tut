@@ -11,18 +11,6 @@
       "day": "Monday",
       "reminder": true,
       "id": 4
-    },
-    {
-      "text": "mmore tester",
-      "day": "",
-      "reminder": false,
-      "id": 6
-    },
-    {
-      "text": "asd",
-      "day": "",
-      "reminder": false,
-      "id": 7
     }
   ]
 }
