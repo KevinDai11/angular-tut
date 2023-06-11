@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { UiService } from '../../services/ui.service';
 import { Subscription } from 'rxjs';
 
-import { Router } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -18,13 +18,24 @@ export class HeaderComponent {
     this.subscription = this.uiService.onToggle().subscribe((bool) => this.showAddTask = bool);
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void {
+    this.router.events.subscribe( (event) => {
+      if (event instanceof NavigationEnd && event.url === '/'){
+        this.showAddTask = false;
+      }
+    })
+  }
 
   toggleAddTask(){
     this.uiService.toggleAddTask();
   }
 
   hasRoute(route: string){
-    return this.router.url === route;
+    if(this.router.url === route){
+      return true;
+    }
+    const currentUrl = this.router.url;
+    const regex = new RegExp(`^${route}\\d+$`);
+    return regex.test(currentUrl);
   }
 }
